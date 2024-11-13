@@ -5,4 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid Layout</title>
     <style>
-        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        /* Outer Grid */
+        .grid-container {
+            display: grid;
+            grid-template-rows: 80px 1fr 60px;  /* Header (80px), main content (auto), footer (60px) */
+            grid-template-columns: 1fr;  /* One column for outer grid */
+            height: 100%;
+        }
+         /* Header */
+         .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+         /* Main content section with nested grid */
+         .main {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 25% 50% 25%; /* 3-column layout for nav, content, sidebar */
+            grid-gap: 20px;
+        }
+         
